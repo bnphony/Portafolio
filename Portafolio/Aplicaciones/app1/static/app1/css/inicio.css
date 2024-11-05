@@ -1,0 +1,51 @@
+/* SECCIONES */
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+section {
+  border: 5px solid black;
+}
+
+/* * SECCION 1: BIENVENIDO * */
+
+/* * SECCION 2: ABOUT ME * */
+
+.c-about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: red;
+}
+
+.c-about .info {
+  /* flex: 1; */
+}
+.c-about .foto {
+  /* flex: 1; */
+}
+
+.c-about > .foto > img {
+  padding: 20px;
+  width: 40vw;
+  height: 80vh;
+}
+
+/* * SECCION 3: EXPERIENCIA * */
+.c-experiencia {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
+}
+
+.c-experiencia .nav-experiencia {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-experiencia .job {
+  display: none;
+}
+
+/* * SECCION 2: PROYECTOS * */
+/* * SECCION 2: CONTACTO * */

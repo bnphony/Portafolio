@@ -1,0 +1,140 @@
+{% extends "body.html" %}
+{% load static %}
+
+{% block librerias_extra %}
+{% comment %} CSS {% endcomment %}
+<link rel="stylesheet" href="{% static 'app1/css/inicio.css' %}" />
+{% comment %} JAVASCRIPT {% endcomment %}
+<script src="{% static 'app1/js/inicio.js' %}"></script>
+{% endblock librerias_extra %}
+
+
+
+{% block content %}
+{% comment %} * BIENVENIDO * {% endcomment %}
+<section id="seccion1">
+    <h2>Bienvenido,</h2>
+    <span class="nombre">My name is Bryan Tarco.</span>
+    <p class="introduccion">Me gusta desarrollar herramientas web y de escritorio.</p>
+</section>
+
+
+{% comment %} * ABOUT ME * {% endcomment %}
+<section id="seccion2">
+    <h2>Acerca de mi</h2>
+
+    <div class="c-about">
+        <div class="info">
+            <div class="biografia">
+                <p>
+                    Profesional apasionado en el desarrollo y diseño de software, con un enfoque sólido en la resolución de problemas. Comprometido con la mejora continua y el
+                    crecimiento en el ámbito laboral, personal e intelectual.
+                </p>
+            </div>
+            <div class="habilidades">
+                <ul class="lista-habilidades">
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>Kotlin</li>
+                    <li>HTML5, CSS</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+        </div>
+        <div class="foto">
+            <img src="{% static 'app1/img/foto_perfil.png' %}" alt="Foto de Perfil">
+        </div>
+    </div>
+</section>
+
+{% comment %} * EXPERIENCIA * {% endcomment %}
+
+<section id="seccion3">
+    <h2>Experiencia</h2>
+    <div class="c-experiencia">
+        <div class="nav-experiencia">
+            <label for="idPuesto1">Puesto 1
+                <input id="idPuesto1" data-id="1" type="radio" name="jobs" checked>
+            </label>
+            <label for="idPuesto2">Puesto 2
+                <input id="idPuesto2" data-id="2" type="radio" name="jobs">
+            </label>
+        </div>
+        <div class="descripcion-experiencia">
+            <div class="full-stack job" id="job1">
+                <div class="desc-puesto">
+                    <p>Full-Stack</p>
+                    <p>Fecha Inicio - Fecha Fin</p>
+                </div>
+                <div class="desc-tareas">
+                    <ul>
+                        <li>Tarea1</li>
+                        <li>Tarea2</li>
+                        <li>Tarea3</li>
+                    </ul>
+                </div>
+                <div class="desc-tecnologias">
+                    <span>Lenguaje1</span>
+                    <span>Lenguaje2</span>
+                    <span>Lenguaje3</span>
+                    <span>Lenguaje4</span>
+                    <span>Lenguaje5</span>
+                </div>
+            </div>
+            <div class="soporte job" id="job2">
+                <div class="desc-puesto">
+                    <p>Soporte</p>
+                    <p>Fecha Inicio - Fecha Fin</p>
+                </div>
+                <div class="desc-tareas">
+                    <ul>
+                        <li>Tarea1</li>
+                        <li>Tarea2</li>
+                        <li>Tarea3</li>
+                    </ul>
+                </div>
+                <div class="desc-tecnologias">
+                    <span>Lenguaje1</span>
+                    <span>Lenguaje2</span>
+                    <span>Lenguaje3</span>
+                    <span>Lenguaje4</span>
+                    <span>Lenguaje5</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% comment %} * PROYECTOS * {% endcomment %}
+<section id="seccion4">
+    <h2>Proyectos</h2>
+    
+    <div class="p-principales">
+        <div class="proyecto1">Proyecto1</div>
+        <div class="proyecto2">Proyecto2</div>
+        <div class="proyecto3">Proyecto3</div>
+        <div class="proyecto4">Proyecto4</div>
+        <div class="proyecto5">Proyecto5</div>
+    </div>
+    <div class="p-secundarios">
+        <div class="s-proyecto1">Proyecto Secundario1</div>
+        <div class="s-proyecto2">Proyecto Secundario2</div>
+        <div class="s-proyecto3">Proyecto Secundario3</div>
+    </div>
+</section>
+
+{% comment %} * CONTACTO *  {% endcomment %}
+<section id="seccion5">
+    <h2>Contacto</h2>
+    <form action="" id="formContacto">
+        <label for="idEmail">Email: </label>
+        <input type="text" id="idEmail" placeholder="Ingrese un email">
+        <label for="idMensaje">Mensaje: </label>
+        <textarea name="" id="idMensaje"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+
+{% endblock content %}
