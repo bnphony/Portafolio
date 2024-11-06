@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
 /* * HEADER * */
 
 .container-header {
@@ -12,9 +22,20 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* * FOOTER * */
+/* * BODY * */
 
+body {
+  background-color: #ff7f7f;
+  font-family: arial;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* * FOOTER * */
 footer {
+  margin-top: auto;
   background-color: cadetblue;
   display: flex;
   align-items: center;
@@ -22,6 +43,7 @@ footer {
   justify-content: center;
   padding: 10px;
 }
+
 footer address {
   margin-bottom: 0;
 }
@@ -30,13 +52,4 @@ footer address {
 .content {
   width: 100%;
   margin: 0 auto;
-}
-
-/* * BODY * */
-body {
-  background-color: #ff7f7f;
-  font-family: arial;
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: auto 1fr auto;
 }

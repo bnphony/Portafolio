@@ -1,10 +1,8 @@
 /* SECCIONES */
 section {
   width: 100%;
-  height: 100vh;
-}
-
-section {
+  min-height: 100vh;
+  margin: 0 auto;
   border: 5px solid black;
 }
 
@@ -12,23 +10,38 @@ section {
 
 /* * SECCION 2: ABOUT ME * */
 
+#seccion2 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
 .c-about {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
   background-color: red;
+  padding: 20px;
+  min-height: 100%;
+}
+.c-about > .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.c-about > .foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.c-about .info {
-  /* flex: 1; */
-}
-.c-about .foto {
-  /* flex: 1; */
+.c-about .lista-habilidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .c-about > .foto > img {
   padding: 20px;
-  width: 40vw;
-  height: 80vh;
+  width: 250px;
+  height: auto;
 }
 
 /* * SECCION 3: EXPERIENCIA * */
@@ -47,5 +60,201 @@ section {
   display: none;
 }
 
-/* * SECCION 2: PROYECTOS * */
-/* * SECCION 2: CONTACTO * */
+/* * SECCION 4: PROYECTOS * */
+.p-principales {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+
+.p-principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "p-info p-img";
+  background-color: green;
+  border: 2px solid white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.p-principal > .p-info {
+  display: grid;
+  grid-template-rows: auto 2fr 1fr;
+}
+.p-info > div {
+  border: 1px solid black;
+}
+
+.p-info > .descripcion {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.p-info > .descripcion > p {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  background-color: blue;
+}
+
+.p-info > .tecnologias > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+.p-info > .tecnologias li {
+  margin-inline: 5px;
+  background-color: gray;
+  border-radius: 10px;
+  padding-inline: 5px;
+}
+.p-info > .tecnologias > .t-links {
+  padding-left: 10px;
+}
+.p-info > .tecnologias > .t-links span {
+  font-size: 1.5rem;
+}
+
+.p-principal > .p-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-principal > .p-img img {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+.p-invertido .p-img {
+  grid-area: p-info;
+}
+
+.p-invertido .p-info {
+  grid-column: p-img;
+}
+
+/* ? PROYECTOS SECUNDARIOS ? */
+.c-secundarios {
+  border: 2px solid white;
+  padding: 20px;
+}
+
+.s-proyecto {
+  border: 2px solid black;
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.s-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.s-info {
+  padding: 10px;
+}
+
+.s-info > .s-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.s-info > .s-header > div {
+  padding-right: 10px;
+  font-size: 1.5rem;
+}
+
+.s-lenguages > ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.s-lenguages > ul li {
+  margin-top: 5px;
+  padding-inline: 5px;
+  background-color: gray;
+  border: 1px solid white;
+  margin-inline: 5px;
+}
+
+/* * SECCION 5: CONTACTO * */
+#seccion5 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 20px;
+}
+#formContacto {
+  background-color: orange;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#formContacto button {
+  margin-top: 20px;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* * MEDIA QUERY * */
+@media (max-width: 720px) {
+  .p-principal {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .p-principal > .p-img img {
+    padding: 0;
+  }
+  .p-invertido {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .p-principales {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    width: 100%;
+  }
+
+  .c-about {
+    grid-template-columns: 1fr;
+  }
+
+  .p-principal {
+    grid-template-columns: 1fr;
+    grid-template-areas: "p-img" "p-info";
+  }
+  .p-principales {
+    padding: 0;
+  }
+
+  .p-principal {
+    padding: 0;
+  }
+
+  .p-principal .p-info {
+    grid-area: p-info;
+  }
+  .p-principal .p-img {
+    grid-area: p-img;
+  }
+
+  .s-proyecto {
+    grid-template-columns: 1fr;
+  }
+}
