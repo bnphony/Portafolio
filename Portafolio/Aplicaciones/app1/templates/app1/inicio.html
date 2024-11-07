@@ -5,7 +5,7 @@
 {% comment %} CSS {% endcomment %}
 <link rel="stylesheet" href="{% static 'app1/css/inicio.css' %}" />
 {% comment %} JAVASCRIPT {% endcomment %}
-<script src="{% static 'app1/js/inicio.js' %}"></script>
+<script src="{% static 'app1/js/inicio.js' %}" type="module"></script>
 {% endblock librerias_extra %}
 
 
@@ -62,13 +62,9 @@
 <section id="seccion3">
     <h2>Experiencia</h2>
     <div class="c-experiencia">
+        {% comment %} Lista de Cargos {% endcomment %}
         <div class="nav-experiencia">
-            <label for="idPuesto1">Puesto 1
-                <input id="idPuesto1" data-id="1" type="radio" name="jobs" checked>
-            </label>
-            <label for="idPuesto2">Puesto 2
-                <input id="idPuesto2" data-id="2" type="radio" name="jobs">
-            </label>
+            
         </div>
         <div class="descripcion-experiencia">
             <div class="full-stack job" id="job1">
@@ -121,63 +117,7 @@
     <h2>Proyectos</h2>
     
     <div class="p-principales">
-        <div class="proyecto1 p-principal">
-            <div class="p-info">
-                <div class="header">
-                    <h3>Proyecto 1</h3>
-                </div>
-                <div class="descripcion">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aut labore debitis consequuntur quos reprehenderit pariatur quaerat doloremque tenetur nam, architecto vero, repellendus voluptate consectetur odio provident maxime nesciunt autem.</p>
-                </div>
-                <div class="tecnologias">
-                    <ul>
-                        <li>hola</li>
-                        <li>hola</li>
-                        <li>hola</li>
-                        <li>hola</li>
-                        <li>hola</li>
-                    </ul>
-                    <div class="t-links">
-                        <span><i class="fab fa-github"></i></span>
-                        <span><i class="fas fa-external-link-square-alt"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="p-img">
-                <img src="{% static 'app1/img/proyecto_1.png' %}" alt="Proyecto 1">
-            </div>
-            
-        </div>
-        <div class="proyecto1 p-principal p-invertido">
-            <div class="p-info">
-                <div class="header">
-                    <h3>Proyecto 2</h3>
-                </div>
-                <div class="descripcion">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aut labore debitis consequuntur quos reprehenderit pariatur quaerat doloremque tenetur nam, architecto vero, repellendus voluptate consectetur odio provident maxime nesciunt autem.</p>
-                </div>
-                <div class="tecnologias">
-                    <ul>
-                        <li>hola</li>
-                        <li>hola</li>
-                        <li>hola</li>
-                        <li>hola</li>
-                        <li>hola</li>
-                    </ul>
-                    <div class="t-links">
-                        <span><i class="fab fa-github"></i></span>
-                        <span><i class="fas fa-external-link-square-alt"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="p-img">
-                <img src="{% static 'app1/img/proyecto_1.png' %}" alt="Proyecto 1">
-            </div>
-            
-        </div>
-        <div class="proyecto3">Proyecto3</div>
-        <div class="proyecto4">Proyecto4</div>
-        <div class="proyecto5">Proyecto5</div>
+        
     </div>
 
     <div class="c-secundarios">
@@ -185,44 +125,7 @@
             <h3>Otros proyectos valiosos</h3>
         </div>
         <div class="p-secundarios">
-            <div class="s-proyecto1 s-proyecto">
-                <div class="s-icono">
-                    <i class="far fa-folder"></i>
-                </div>
-                <div class="s-info">
-                    <div class="s-header">
-                        <h4>Nombre Proyecto</h4>
-                        <div>
-                            <i class="fab fa-github"></i>
-                            <i class="fas fa-external-link-square-alt"></i>
-                        </div>
-                    </div>
-                    <div class="s-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolores rem commodi voluptas similique velit magni architecto sit, fuga quaerat dignissimos earum! Hic laudantium accusantium, quaerat soluta repudiandae enim exercitationem.</p>
-                    </div>
-                    <div class="s-lenguages">
-                        <ul>
-                            <li>python</li>
-                            <li>python</li>
-                            <li>python</li>
-                            <li>python</li>
-                            <li>python</li>
-                            <li>hola</li>
-                            <li>hola</li>
-                            <li>hola</li>
-                            <li>hola</li>
-                            <li>hola</li>
-                            <li>hola</li>
-                            <li>hola</li>
-                            <li>hola</li>
-                            <li>hola</li>
-                            <li>hola</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="s-proyecto2">Proyecto Secundario2</div>
-            <div class="s-proyecto3">Proyecto Secundario3</div>
+          
         </div>
     </div>
 </section>
