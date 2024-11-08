@@ -84,14 +84,15 @@ function graficarExperiencia() {
     let htmlJobs = '';
     experiencia.forEach((item, index) => {
         htmlNAV += `
-            <label for="idPuesto${index}">${item.cargo}
-                <input id="idPuesto${index}" data-id="${index}" type="radio" name="jobs" ${index === 0 ? 'checked' : ''}>
+            <input id="idPuesto${index}" data-id="${index}" type="radio" name="jobs" ${index === 0 ? 'checked' : ''}>
+            <label for="idPuesto${index}" class="label-job">${item.cargo}
             </label>
         `;
         htmlJobs += `
             <div class="job" id="job${index}">
                 <div class="desc-puesto">
                     <p>${item.cargo}</p>
+                    <p>${item.empresa}</p>
                     <p>${item.fecha_inicio} - ${item.fecha_fin}</p>
                 </div>
                 <div class="desc-tareas">
@@ -120,8 +121,53 @@ function graficarExperiencia() {
     $('input[name="jobs"]:checked').each(mostrarJob);
 }
 
+
+function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+
 $(function() {
 
     graficarExperiencia();
     graficarProyectos();
+
+    // Usada para reducir el numero de veces que se ejecuta un evento
+
+    // const $titulos = document.querySelectorAll('.titulo-seccion');
+    // const $secciones  = document.querySelectorAll('section');
+
+    // function checkSlide(e) {
+    //     console.log('y');
+    //     $titulos.forEach(titulo => {
+    //         // Calculate halfway through the element's height
+    //         const slideInAt = (window.scrollY + window.innerHeight) - titulo.offsetHeight / 2;
+    //         // Calculate the bottom of the element
+    //         const elementBottom = titulo.offsetTop + titulo.offsetHeight;
+            
+    //         // Check if the element is halfway shown
+    //         const isHalfShown = slideInAt > titulo.offsetTop;
+    //         // Check if the element has not been scrolled past
+    //         const isNotScrolledPast = window.scrollY < elementBottom;
+            
+    //         // Add or remove the active class based on visibility
+    //         if (isHalfShown && isNotScrolledPast) {
+    //             titulo.classList.add('active');
+    //         } else {
+    //             titulo.classList.remove('active');
+    //         }
+    //     });
+    // }
+    // window.addEventListener('scroll', debounce(checkSlide));
 });

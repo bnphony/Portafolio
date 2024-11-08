@@ -5,12 +5,12 @@ export const experiencia = [
         'fecha_inicio': 'Enero-2024',
         'fecha_fin': 'Marzo-2024',
         'actividades': [
-            '- Análisis y diseño del sistema.',
-            '- Toma de requisitos.',
-            '- Creación de Prototipos.',
-            '- Desarrollo de un Sistema para la Gestión de un Campeonato de Fútbol.',
-            '- Implementación del sistema en un Servidor Web.',
-            '- Generación de Reportes.'
+            'Análisis y diseño del sistema.',
+            'Toma de requisitos.',
+            'Creación de Prototipos.',
+            'Desarrollo de un Sistema para la Gestión de un Campeonato de Fútbol.',
+            'Implementación del sistema en un Servidor Web.',
+            'Generación de Reportes.'
         ],
     },
     {
@@ -19,9 +19,9 @@ export const experiencia = [
         'fecha_inicio': 'Enero-2023',
         'fecha_fin': 'Junio-2023',
         'actividades': [
-            '- Soporte y Mantenimiento de Equipos de Cómputo y Redes.',
-            '- Implementación del cableado de redes informáticas.',
-            '- Gestión estratégica de inventarios.',
+            'Soporte y Mantenimiento de Equipos de Cómputo y Redes.',
+            'Implementación del cableado de redes informáticas.',
+            'Gestión estratégica de inventarios.',
         ],
     }
 ];

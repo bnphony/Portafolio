@@ -13,22 +13,39 @@
 {% block content %}
 {% comment %} * BIENVENIDO * {% endcomment %}
 <section id="seccion1">
-    <h2>Bienvenido,</h2>
-    <span class="nombre">My nombre is Bryan Tarco.</span>
-    <p class="introduccion">Utilizo el desarrollo de software para resolver problemas.</p>
+    <div class="c-bienvenida">
+        <div class="b-info">
+            <span class="saludo">Bienvenido, mi nombre es</span>
+            <h2 class="nombre">Bryan Tarco.</h2>
+            <h3 class="sub-titulo">Desarrollo Software para resolver problemas.</h3>
+            <p class="introduccion">Soy ingeniero en Sistemas, centrado en el diseño y desarrollo aplicaciones de software, que puedan ayudar a encontrar soluciones a los problemas de las personas, además de potenciar su habilidades.</p>
+        </div>
+        <div class="b-contacto">
+            <i class="fab fa-github"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+    </div>
 </section>
 
 
 {% comment %} * ABOUT ME * {% endcomment %}
 <section id="seccion2">
-    <h2>Acerca de mi</h2>
+    <h2 class="align-left titulo-seccion">Acerca de mi</h2>
 
     <div class="c-about">
         <div class="info">
             <div class="biografia">
+                <article>
+                    <p>Hola, mi nombre es Bryan y me gusta ayudar a las personas y si es posible potenciar sus habilidades. Para lograr ese objetivo utilizo el diseño y desarrollo de software, y si esto no es suficiente, puedo guiarlas hacia sus intereses.</p>
+                    <p>
+                        Hasta el momento, tengo todo el conocimiento y experiencia adquiridos durante mi formación academica, experiencia como desarrollador full-stack de parte un sistema para un campeonato de futbol, diversos conocimientos en el area de hardware gracias a mi trabajo como técnico en informática.  Ademas de una variedad de proyectos propios.
+                    </p>
+                    <p>
+
+                    </p>
+                </article>
                 <p>
-                    Profesional apasionado en el desarrollo y diseño de software, con un enfoque sólido en la resolución de problemas. Comprometido con la mejora continua y el
-                    crecimiento en el ámbito laboral, personal e intelectual.
+                    Estas son algunas de las técnologias con la cuales he trabajo:
                 </p>
             </div>
             <div class="habilidades">
@@ -36,18 +53,16 @@
                     <li>Python</li>
                     <li>JavaScript</li>
                     <li>Kotlin</li>
-                    <li>HTML5, CSS</li>
                     <li>Java</li>
-                    <li>python</li>
-                    <li>python</li>
-                    <li>python</li>
-                    <li>python</li>
-                    <li>python</li>
-                    <li>python</li>
-                    <li>python</li>
-                    <li>python</li>
-                    <li>python</li>
-                    <li>python</li>
+                    <li>PHP</li>
+                    <li>Django</li>
+                    <li>PostgreSQL</li>
+                    <li>MySQL</li>
+                    <li>Oracle</li>
+                    <li>SQLite</li>
+                    <li>Microsoft Exel, Word, PowerPoint</li>
+                    <li>GIT</li>
+                    <li>D3js</li>
                 </ul>
             </div>
         </div>
@@ -60,53 +75,15 @@
 {% comment %} * EXPERIENCIA * {% endcomment %}
 
 <section id="seccion3">
-    <h2>Experiencia</h2>
+    <h2 class="align-left titulo-seccion">Experiencia</h2>
     <div class="c-experiencia">
         {% comment %} Lista de Cargos {% endcomment %}
         <div class="nav-experiencia">
             
         </div>
         <div class="descripcion-experiencia">
-            <div class="full-stack job" id="job1">
-                <div class="desc-puesto">
-                    <p>Full-Stack</p>
-                    <p>Fecha Inicio - Fecha Fin</p>
-                </div>
-                <div class="desc-tareas">
-                    <ul>
-                        <li>Tarea1</li>
-                        <li>Tarea2</li>
-                        <li>Tarea3</li>
-                    </ul>
-                </div>
-                <div class="desc-tecnologias">
-                    <span>Lenguaje1</span>
-                    <span>Lenguaje2</span>
-                    <span>Lenguaje3</span>
-                    <span>Lenguaje4</span>
-                    <span>Lenguaje5</span>
-                </div>
-            </div>
-            <div class="soporte job" id="job2">
-                <div class="desc-puesto">
-                    <p>Soporte</p>
-                    <p>Fecha Inicio - Fecha Fin</p>
-                </div>
-                <div class="desc-tareas">
-                    <ul>
-                        <li>Tarea1</li>
-                        <li>Tarea2</li>
-                        <li>Tarea3</li>
-                    </ul>
-                </div>
-                <div class="desc-tecnologias">
-                    <span>Lenguaje1</span>
-                    <span>Lenguaje2</span>
-                    <span>Lenguaje3</span>
-                    <span>Lenguaje4</span>
-                    <span>Lenguaje5</span>
-                </div>
-            </div>
+            
+            
         </div>
     </div>
 </section>
@@ -114,7 +91,7 @@
 
 {% comment %} * PROYECTOS * {% endcomment %}
 <section id="seccion4">
-    <h2>Proyectos</h2>
+    <h2 class="align-left titulo-seccion">Proyectos</h2>
     
     <div class="p-principales">
         
@@ -132,7 +109,7 @@
 
 {% comment %} * CONTACTO *  {% endcomment %}
 <section id="seccion5">
-    <h2>Contacto</h2>
+    <h2 class="align-left titulo-seccion">Contacto</h2>
     <form action="" id="formContacto">
         <label for="idEmail">Email: </label>
         <input type="text" id="idEmail" placeholder="Ingrese un email">
