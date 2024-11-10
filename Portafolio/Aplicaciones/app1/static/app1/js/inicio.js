@@ -19,7 +19,7 @@ function graficarProyectos() {
     proyectos.forEach((item, index) => {
         if (index < 5) {
             htmlPrincipales += `
-                <div class="p-principal">
+                <div class="p-principal ${index % 2 === 1 ? 'p-invertido' : ''}">
                     <div class="p-info">
                         <div class="header">
                             <h3>${item.nombre}</h3>

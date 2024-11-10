@@ -15,11 +15,12 @@ section {
 
 .c-bienvenida {
   width: 70%;
+  padding-left: 20px;
   margin-top: -50px;
-  margin-left: 30px;
 }
 
 .b-info .saludo {
+  letter-spacing: 0.2rem;
 }
 .b-info .nombre {
   font-size: 3rem;
@@ -34,6 +35,7 @@ section {
 .b-info .introduccion {
   text-align: justify;
   font-size: 1.2rem;
+  letter-spacing: 0.1rem;
 }
 
 .b-contacto {
@@ -54,6 +56,7 @@ section {
   min-height: 100%;
 }
 .c-about > .info {
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,9 +86,12 @@ section {
 }
 
 .c-experiencia {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.2rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  column-gap: 10px;
+  column-gap: 30px;
   padding: 20px;
 }
 
@@ -97,11 +103,11 @@ input[name="jobs"] {
   padding: 10px;
 }
 .label-job:hover {
-  background-color: aqua;
+  background-color: var(--primary-color);
 }
 
 input[name="jobs"]:checked + .label-job {
-  background-color: green;
+  background-color: var(--primary-color);
 }
 
 .c-experiencia .nav-experiencia {
@@ -118,10 +124,11 @@ input[name="jobs"]:checked + .label-job {
 }
 .job .desc-puesto p:nth-child(1) {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .job .desc-puesto p:not(:nth-child(1)) {
   font-size: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 .job .desc-tareas {
@@ -171,6 +178,11 @@ input[name="jobs"]:checked + .label-job {
   grid-template-rows: auto 1fr;
 }
 
+.proyectos {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .p-principales {
   display: flex;
   flex-direction: column;
@@ -195,6 +207,11 @@ input[name="jobs"]:checked + .label-job {
   border: 1px solid black;
 }
 
+.p-info .header > h3 {
+  font-size: 1.7rem;
+  color: var(--accent-color);
+}
+
 .p-info > .descripcion {
   display: flex;
   align-items: center;
@@ -205,6 +222,7 @@ input[name="jobs"]:checked + .label-job {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   padding: 10px;
   background-color: blue;
+  font-size: 1.2rem;
 }
 
 .p-info > .tecnologias > ul {
@@ -238,6 +256,7 @@ input[name="jobs"]:checked + .label-job {
   width: 100%;
   height: auto;
   max-height: 300px;
+  object-fit: scale-down;
   padding: 10px;
 }
 .p-invertido .p-img {
@@ -259,6 +278,7 @@ input[name="jobs"]:checked + .label-job {
   background-color: aqua;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  margin-block: 20px;
 }
 .s-icono {
   display: flex;
@@ -283,6 +303,10 @@ input[name="jobs"]:checked + .label-job {
   font-size: 1.5rem;
 }
 
+.s-info > .s-content {
+  font-size: 1.2rem;
+}
+
 .s-lenguages > ul {
   display: flex;
   list-style: none;
@@ -297,6 +321,20 @@ input[name="jobs"]:checked + .label-job {
   background-color: gray;
   border: 1px solid white;
   margin-inline: 5px;
+}
+
+/* ? Ver mas proyectos ? */
+.p-opciones {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+.p-opciones > button {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: aliceblue;
 }
 
 /* * SECCION 5: CONTACTO * */
@@ -345,19 +383,36 @@ input[name="jobs"]:checked + .label-job {
   :root {
     font-size: 14px;
   }
+
+  /* Seccion 3 */
+  .c-experiencia {
+    width: 90%;
+  }
+  /* Seccion 4 */
+
   .p-principal {
     grid-template-columns: 2fr 1fr;
+  }
+
+  .p-principal {
+    grid-template-columns: 1fr;
+    grid-template-areas: "p-img" "p-info";
+  }
+  .p-principal .p-info {
+    grid-area: p-info;
+  }
+  .p-principal .p-img {
+    grid-area: p-img;
+    padding-block: 20px;
   }
 
   .p-principal > .p-img img {
     padding: 0;
   }
-  .p-invertido {
-    grid-template-columns: 1fr 2fr;
-  }
 
-  .p-principales {
+  .proyectos {
     padding: 10px;
+    width: 90%;
   }
 }
 
@@ -380,13 +435,24 @@ input[name="jobs"]:checked + .label-job {
     width: 150px;
   }
 
+  /* SECCION 3 */
+  .c-experiencia {
+    width: 100%;
+  }
+
   /* SECCION 4 */
 
   .p-principal {
     grid-template-columns: 1fr;
     grid-template-areas: "p-img" "p-info";
   }
-  .p-principales {
+
+  .proyectos {
+    width: 100%;
+    padding: 0;
+  }
+  .p-principales,
+  .c-secundarios {
     padding: 0;
   }
 
