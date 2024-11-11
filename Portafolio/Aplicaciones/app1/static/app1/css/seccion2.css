@@ -1,0 +1,59 @@
+/* * SECCION 2: ABOUT ME * */
+
+#seccion2 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.c-about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 20px;
+  min-height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+.c-about > .info {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.c-about > .foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-about .lista-habilidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 20px;
+}
+
+.c-about > .foto > img {
+  margin: 20px;
+  width: 250px;
+  height: auto;
+  box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* * MEDIA QUERY * */
+@media (max-width: 720px) {
+  /* Seccion 2 */
+  .c-about {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* SECCION 2 */
+  .c-about {
+    width: 100%;
+  }
+
+  .c-about > .foto > img {
+    width: 150px;
+  }
+}

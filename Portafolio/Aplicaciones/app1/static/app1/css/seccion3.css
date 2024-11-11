@@ -1,0 +1,108 @@
+/* * SECCION 3: EXPERIENCIA * */
+#seccion3 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.c-experiencia {
+  width: 70%;
+  margin: auto auto;
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 30px;
+  padding: 20px;
+}
+
+input[name="jobs"] {
+  display: none;
+}
+.label-job {
+  cursor: pointer;
+  padding: 10px;
+}
+.label-job:hover {
+  background-color: var(--primary-color);
+}
+
+input[name="jobs"]:checked + .label-job {
+  background-color: var(--primary-color);
+}
+
+.c-experiencia .nav-experiencia {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-experiencia .job {
+  display: none;
+}
+
+.job .desc-puesto p {
+  margin-bottom: 0;
+}
+.job .desc-puesto p:nth-child(1) {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.job .desc-puesto p:not(:nth-child(1)) {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.job .desc-tareas {
+  margin-top: 10px;
+}
+.desc-tareas > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.desc-tareas > ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #b0c7db;
+}
+
+.desc-tareas > ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #4ee1a0;
+  font-size: 1.2em;
+}
+
+.job .desc-tecnologias {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+}
+.job .desc-tecnologias span {
+  margin-inline: 5px;
+  margin-block: 5px;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  border-radius: 10px;
+  padding-inline: 5px;
+}
+
+/* * MEDIA QUERY * */
+@media (max-width: 720px) {
+  /* Seccion 3 */
+  .c-experiencia {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* SECCION 3 */
+  .c-experiencia {
+    width: 100%;
+  }
+}
