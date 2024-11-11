@@ -137,15 +137,31 @@ function debounce(func, wait = 20, immediate = true) {
 $(function() {
 
     const $nav = document.querySelector('nav.main-header');
-    const $navLinks = document.querySelectorAll('header nav a');
+    const $navLinks = document.querySelectorAll('nav.main-header a');
+    const $secciones = document.querySelectorAll('section');
+    console.log($navLinks);
     const topOfNav = $nav.offsetTop;
+    let oneSeccion = '';
     function fixNav() {
         if (window.scrollY-5 >= topOfNav) {
             document.body.style.paddingTop = $nav.offsetHeight + 'px';
             document.body.classList.add('fixed-nav');
-            console.log(`window y: ${window.scrollY}, top: ${topOfNav}`);
-        } else {
-            console.log(`wdfdfdfindow y: ${window.scrollY}, top: ${topOfNav}`);
+            $secciones.forEach(seccion => {
+                let topSeccion = seccion.offsetTop;
+                let heightSeccion = seccion.offsetHeight;
+                let id = seccion.getAttribute('id');
+                let top = window.scrollY + 100;
+                if (top >= topSeccion && top < topSeccion + heightSeccion && oneSeccion !== id) {
+                    oneSeccion = id;
+                    $navLinks.forEach(link => {
+                        link.classList.remove('active-link');
+                        // document.querySelector(`nav.main-header a[href*="#${id}"]`).classList.add('active-link');
+                        if (link.getAttribute('href') === `#${oneSeccion}`) link.classList.add('active-link');
+                    });
+                    console.log('top: ', seccion.getAttribute('id'));
+                }
+            });
+        } else { // The top of the page
             document.body.style.paddingTop = 0;
             document.body.classList.remove('fixed-nav');
         }

@@ -60,6 +60,11 @@ nav a:hover {
   text-decoration: none;
 }
 
+a.active-link {
+  color: var(--accent-color) !important;
+  font-weight: bold;
+}
+
 .hoja-vida {
   background-color: var(--primary-color);
   border-radius: 10px;
