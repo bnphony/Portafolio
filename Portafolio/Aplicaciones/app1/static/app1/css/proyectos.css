@@ -1,0 +1,123 @@
+nav.main-header {
+  display: none;
+}
+
+.c-lista-proyectos {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 50px;
+  row-gap: 20px;
+}
+
+/* * Contenedor Volver * */
+.c-volver button::before {
+  content: "\25C2"; /* Unicode for ◂ */
+  color: var(--primary-color);
+  transition: font-size 0.2s;
+}
+
+.c-volver button {
+  font-size: 2rem;
+  vertical-align: center;
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+}
+.c-volver button:hover::before {
+  scale: 2;
+  color: var(--accent-color);
+  font-size: 2.5rem;
+}
+
+.c-volver button a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+/* .c-volver button a:hover {
+    color: var(--primary-color);
+  } */
+
+/* * Tabla *  */
+#tablaProyectos {
+  /* border: 1px solid white; */
+}
+
+#tablaProyectos thead th {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+#tablaProyectos tr:not(:last-child),
+#tablaProyectos thead tr {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+#tablaProyectos tbody tr > td:nth-child(1) {
+  text-align: center;
+}
+#tablaProyectos tbody tr > td:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#tablaProyectos tbody tr > td:not(:nth-child(2)) {
+  color: var(--secondary-color);
+}
+
+#tablaProyectos tbody .column-links a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: font-size 0.2s;
+}
+
+#tablaProyectos tbody .column-links a i {
+  padding-inline: 10px;
+}
+
+#tablaProyectos tbody .column-links a:hover {
+  color: var(--accent-color);
+}
+#tablaProyectos tbody .column-links a:hover i {
+  font-size: 1.2rem;
+}
+
+#tablaProyectos tbody span {
+  margin-inline: 5px;
+  margin-bottom: 5px;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 20px;
+  padding-inline: 10px;
+  padding-block: 5px;
+}
+
+#tablaProyectos .column-tecnologias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-block: 5px;
+  flex-basis: stretch;
+}
+
+/* MEDIA QUERRY */
+@media (max-width: 720px) {
+  .c-lista-proyectos {
+    padding: 20px;
+  }
+
+  #tablaProyectos .columna-t {
+    display: none;
+  }
+
+  #tablaProyectos .column-tecnologias {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-lista-proyectos {
+    padding: 0;
+  }
+}

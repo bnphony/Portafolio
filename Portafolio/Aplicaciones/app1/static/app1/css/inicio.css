@@ -41,6 +41,13 @@ section {
 .b-contacto {
   font-size: 2rem;
 }
+.b-contacto a {
+  margin-right: 10px;
+  color: var(--text-color);
+}
+.b-contacto a:hover {
+  color: var(--primary-color);
+}
 
 /* * SECCION 2: ABOUT ME * */
 
@@ -54,6 +61,8 @@ section {
   grid-template-rows: 1fr;
   padding: 20px;
   min-height: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 .c-about > .info {
   font-size: 1.2rem;
@@ -74,9 +83,10 @@ section {
 }
 
 .c-about > .foto > img {
-  padding: 20px;
+  margin: 20px;
   width: 250px;
   height: auto;
+  box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.5);
 }
 
 /* * SECCION 3: EXPERIENCIA * */
@@ -166,8 +176,9 @@ input[name="jobs"]:checked + .label-job {
 }
 .job .desc-tecnologias span {
   margin-inline: 5px;
-  margin-bottom: 5px;
-  background-color: gray;
+  margin-block: 5px;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
   border-radius: 10px;
   padding-inline: 5px;
 }
@@ -194,18 +205,19 @@ input[name="jobs"]:checked + .label-job {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "p-info p-img";
-  border: 2px solid white;
-  padding: 10px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 1);
+  padding: 20px;
   margin-bottom: 20px;
+  border-radius: 20px;
 }
 
 .p-principal > .p-info {
   display: grid;
   grid-template-rows: auto 2fr 1fr;
 }
-.p-info > div {
+/* .p-info > div {
   border: 1px solid black;
-}
+} */
 
 .p-info .header > h3 {
   font-size: 1.7rem;
@@ -221,7 +233,6 @@ input[name="jobs"]:checked + .label-job {
 .p-info > .descripcion > p {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   padding: 10px;
-  background-color: blue;
   font-size: 1.2rem;
 }
 
@@ -235,16 +246,23 @@ input[name="jobs"]:checked + .label-job {
 }
 .p-info > .tecnologias li {
   margin-inline: 5px;
-  background-color: gray;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
   margin-block: 5px;
   border-radius: 10px;
   padding-inline: 5px;
+  letter-spacing: 0.1rem;
 }
 .p-info > .tecnologias > .t-links {
   padding-left: 10px;
 }
-.p-info > .tecnologias > .t-links span {
+.p-info > .tecnologias > .t-links a {
+  color: var(--secondary-color);
   font-size: 1.5rem;
+  transition: font-size 0.2s;
+}
+.p-info > .tecnologias > .t-links a:hover {
+  color: var(--accent-color);
 }
 
 .p-principal > .p-img {
@@ -269,16 +287,15 @@ input[name="jobs"]:checked + .label-job {
 
 /* ? PROYECTOS SECUNDARIOS ? */
 .c-secundarios {
-  border: 2px solid white;
   padding: 20px;
 }
 
 .s-proyecto {
-  border: 2px solid black;
-  background-color: aqua;
+  background-color: var(--primary-color);
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin-block: 20px;
+  color: var(--bg-color);
 }
 .s-icono {
   display: flex;
@@ -297,10 +314,21 @@ input[name="jobs"]:checked + .label-job {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+.s-info > .s-header h4 {
+  font-weight: bold;
+}
 
 .s-info > .s-header > div {
   padding-right: 10px;
   font-size: 1.5rem;
+}
+.s-info > .s-header > div a {
+  color: var(--bg-color);
+  transition: all 0.2s;
+}
+.s-info > .s-header > div a:hover {
+  color: var(--secondary-color);
+  font-size: 1.7rem;
 }
 
 .s-info > .s-content {
@@ -318,9 +346,9 @@ input[name="jobs"]:checked + .label-job {
 .s-lenguages > ul li {
   margin-top: 5px;
   padding-inline: 5px;
-  background-color: gray;
-  border: 1px solid white;
+  border: 1px solid var(--secondary-color);
   margin-inline: 5px;
+  letter-spacing: 0.1rem;
 }
 
 /* ? Ver mas proyectos ? */
@@ -328,31 +356,55 @@ input[name="jobs"]:checked + .label-job {
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .p-opciones > button {
   padding: 10px;
   border-radius: 10px;
   font-size: 1.2rem;
-  background-color: aliceblue;
 }
 
+.p-opciones a {
+  color: var(--accent-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.p-opciones button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.p-opciones button:hover a {
+  color: var(--bg-color);
+}
 /* * SECCION 5: CONTACTO * */
 #seccion5 {
   display: grid;
   grid-template-rows: auto 1fr;
   padding: 20px;
+  width: 50%;
 }
 #formContacto {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background-color: orange;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   padding: 20px;
+  font-size: 1.5rem;
 }
 
 #formContacto button {
   margin-top: 20px;
+}
+
+#formContacto label {
+  color: var(--bg-color);
+}
+#formContacto input {
+  padding: 10px;
+}
+#formContacto textarea {
+  padding: 20px;
 }
 
 /* * ANIMACION DE LOS TITULOS * */
@@ -384,15 +436,17 @@ input[name="jobs"]:checked + .label-job {
     font-size: 14px;
   }
 
+  /* Seccion 2 */
+  .c-about {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
   /* Seccion 3 */
   .c-experiencia {
     width: 90%;
   }
   /* Seccion 4 */
-
-  .p-principal {
-    grid-template-columns: 2fr 1fr;
-  }
 
   .p-principal {
     grid-template-columns: 1fr;
@@ -414,6 +468,11 @@ input[name="jobs"]:checked + .label-job {
     padding: 10px;
     width: 90%;
   }
+
+  /* SECCION 5 */
+  #seccion5 {
+    width: 90%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -428,7 +487,7 @@ input[name="jobs"]:checked + .label-job {
 
   /* SECCION 2 */
   .c-about {
-    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .c-about > .foto > img {
@@ -449,7 +508,6 @@ input[name="jobs"]:checked + .label-job {
 
   .proyectos {
     width: 100%;
-    padding: 0;
   }
   .p-principales,
   .c-secundarios {
@@ -457,7 +515,7 @@ input[name="jobs"]:checked + .label-job {
   }
 
   .p-principal {
-    padding: 0;
+    padding: 10px;
   }
 
   .p-principal .p-info {
@@ -469,5 +527,11 @@ input[name="jobs"]:checked + .label-job {
 
   .s-proyecto {
     grid-template-columns: 1fr;
+  }
+
+  /* SECCION 5 */
+  #seccion5 {
+    padding: 0;
+    width: 100%;
   }
 }

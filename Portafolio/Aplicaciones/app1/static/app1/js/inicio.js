@@ -3,10 +3,8 @@ import { proyectos, experiencia } from './data.js';
 function mostrarJob() {
     // Hide all job elements
     $('.job').hide();
-    console.log("SE EJECUTA");
     // Get the data-id of the selected input
     const id = $(this).data('id');
-    console.log('id: ', id);
     // Show only the selected job if checked
     if ($(this).is(':checked')) {
         $(`#job${id}`).show();
@@ -34,8 +32,8 @@ function graficarProyectos() {
                                 }).join('')}
                             </ul>
                             <div class="t-links">
-                                ${item.github !== '' ? '<span><i class="fab fa-github"></i></span>' : ''}
-                                ${item.url !== '' ? '<span><i class="fas fa-external-link-square-alt"></i></span>' : ''}
+                                ${item.github !== '' ? '<span><a href="'+ item.github +'"><i class="fab fa-github"></i></a></span>' : ''}
+                                ${item.url !== '' ? '<span><a href="'+ item.url +'"><i class="fas fa-external-link-square-alt"></i></a></span>' : ''}
                             </div>
                         </div>
                     </div>
@@ -54,8 +52,8 @@ function graficarProyectos() {
                     <div class="s-header">
                         <h4>${item.nombre}</h4>
                         <div>
-                            ${item.github !== '' ? '<span><i class="fab fa-github"></i></span>' : ''}
-                            ${item.url !== '' ? '<span><i class="fas fa-external-link-square-alt"></i></span>' : ''}
+                            ${item.github !== '' ? '<span><a href="'+item.github+'"><i class="fab fa-github"></i></a></span>' : ''}
+                            ${item.url !== '' ? '<span><a href="'+item.url+'"><i class="fas fa-external-link-square-alt"></i></a></span>' : ''}
                         </div>
                     </div>
                     <div class="s-content">
@@ -103,11 +101,9 @@ function graficarExperiencia() {
                     </ul>
                 </div>
                 <div class="desc-tecnologias">
-                    <span>Lenguaje1</span>
-                    <span>Lenguaje2</span>
-                    <span>Lenguaje3</span>
-                    <span>Lenguaje4</span>
-                    <span>Lenguaje5</span>
+                    ${item.tecnologias.map(tecnologia => {
+                        return '<span>' + tecnologia + '</span>';
+                    }).join('')}
                 </div>
             </div>
         `;
@@ -139,6 +135,22 @@ function debounce(func, wait = 20, immediate = true) {
 
 
 $(function() {
+
+    const $nav = document.querySelector('nav.main-header');
+    const $navLinks = document.querySelectorAll('header nav a');
+    const topOfNav = $nav.offsetTop;
+    function fixNav() {
+        if (window.scrollY-5 >= topOfNav) {
+            document.body.style.paddingTop = $nav.offsetHeight + 'px';
+            document.body.classList.add('fixed-nav');
+            console.log(`window y: ${window.scrollY}, top: ${topOfNav}`);
+        } else {
+            console.log(`wdfdfdfindow y: ${window.scrollY}, top: ${topOfNav}`);
+            document.body.style.paddingTop = 0;
+            document.body.classList.remove('fixed-nav');
+        }
+    }
+    window.addEventListener('scroll', fixNav);
 
     graficarExperiencia();
     graficarProyectos();

@@ -6,7 +6,7 @@ html {
   --bg-color: #0f202b;
   --text-color: #ffffff;
   --primary-color: #09be8b;
-  --secondary-color: #ffffff;
+  --secondary-color: #ccc;
   --accent-color: #05dee6;
 }
 
@@ -20,7 +20,19 @@ html {
 
 nav.main-header {
   margin-bottom: -10px;
+  background-color: var(--bg-color);
+  width: 100%;
+  top: 0;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1;
 }
+
+.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
 .container-header {
   padding-top: 10px;
 }
@@ -72,12 +84,13 @@ body {
 /* * FOOTER * */
 footer {
   margin-top: auto;
-  background-color: cadetblue;
   display: flex;
+  color: var(--primary-color);
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
+  font-size: 1.7rem;
 }
 
 footer address {
@@ -88,5 +101,4 @@ footer address {
 .content {
   width: 100%;
   margin: 0 auto;
-  border: 2px solid white;
 }

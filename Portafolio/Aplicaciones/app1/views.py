@@ -27,3 +27,11 @@ class PrincipalView(TemplateView):
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context = super().get_context_data(**kwargs)
         return context
+    
+class ProyectosListView(TemplateView):
+    template_name = "app1/proyectos_list.html"
+
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+    

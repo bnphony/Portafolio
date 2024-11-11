@@ -1,0 +1,30 @@
+{% extends "body.html" %}
+{% load static %}
+
+{% block librerias_extra %}
+    <link rel="stylesheet" href="{% static 'app1/css/proyectos.css' %}">
+    <script src="{% static 'app1/js/proyectos.js' %}" type="module"></script>
+{% endblock librerias_extra %}
+
+{% block content %}
+<div class="c-lista-proyectos">
+    <div class="c-volver">
+        <button type="button"><a href="{% url 'app1:home' %}">Volver</a></button>
+        <h2>Todos los Proyectos</h2>
+    </div>
+    <table id="tablaProyectos">
+        <thead>
+            <tr>
+                <th scope="col" style="width: 10%;">Año</th>
+                <th scope="col" style="width: 40%;">Proyecto</th>
+                <th class="columna-t" scope="col" style="width: 40%;">Tecnologias Utilizadas</th>
+                <th scope="col" style="width: 10%;">Links</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

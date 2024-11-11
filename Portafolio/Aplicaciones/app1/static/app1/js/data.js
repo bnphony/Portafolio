@@ -12,6 +12,9 @@ export const experiencia = [
             'Implementación del sistema en un Servidor Web.',
             'Generación de Reportes.'
         ],
+        'tecnologias': ['Toma de Requisitos', 
+            'Diseño de BD', 'Implementación', 
+            'Python', 'Django', 'postgresql', 'HTML-CSS-JavaScript', 'JQuery', 'Ajax', 'Bootstrap'],
     },
     {
         'cargo': 'Técnico en Informática',
@@ -23,6 +26,17 @@ export const experiencia = [
             'Implementación del cableado de redes informáticas.',
             'Gestión estratégica de inventarios.',
         ],
+        'tecnologias': [
+            'Microsoft Word', 
+            'Microsoft Excel', 
+            'Microsoft Power Point', 
+            'Punto de Acceso',
+            'Cableado',
+            'Canvas',
+            'Photoshop',
+            'Ilustrator',
+            'AnyDesk',
+        ]
     }
 ];
 
@@ -38,6 +52,7 @@ export const proyectos = [
         'imagen': 'app1/img/proyecto_1.png',
         'url': 'https://campeonato-mulalo.top/',
         'github': '',
+        'year': '2024',
     },
     {
         'nombre': 'Gestionar Ventas',
@@ -48,6 +63,7 @@ export const proyectos = [
         'imagen': '',
         'url': '',
         'github': 'https://github.com/bnphony/Ventas-AS',
+        'year': '2022',
     },
     {
         'nombre': 'Cronometro',
@@ -58,6 +74,7 @@ export const proyectos = [
         'imagen': '',
         'url': '',
         'github': 'https://github.com/bnphony/Cronometro-AS',
+        'year': '2023',
     },
     {
         'nombre': 'Calificar Series',
@@ -68,6 +85,7 @@ export const proyectos = [
         'imagen': '',
         'url': '',
         'github': 'https://github.com/bnphony/Calificar-Series',
+        'year': '2023',
     },
     {
         'nombre': 'Suma Mental',
@@ -78,6 +96,7 @@ export const proyectos = [
         'imagen': '',
         'url': '',
         'github': 'https://github.com/bnphony/Suma-Mental',
+        'year': '2024',
     },
     {
         'nombre': 'Lista Comentada',
@@ -88,6 +107,7 @@ export const proyectos = [
         'imagen': '',
         'url': '',
         'github': 'https://github.com/bnphony/ListaComentada',
+        'year': '2024',
     },
     {
         'nombre': 'Sistema de Inventario',
@@ -98,5 +118,6 @@ export const proyectos = [
         'imagen': '',
         'url': '',
         'github': 'https://github.com/bnphony/Sistema-Inventario',
+        'year': '2022',
     },
 ];
