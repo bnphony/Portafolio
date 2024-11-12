@@ -1,4 +1,4 @@
-import { proyectos } from './static/js/data.js';
+import { proyectos } from '/Portafolio/static/js/data.js';
 
 $(function() {
     let html = '';
