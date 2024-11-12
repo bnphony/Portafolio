@@ -1,4 +1,4 @@
-import { proyectos, experiencia } from 'Portafolio/static/data.js';
+import { proyectos, experiencia } from './static/data.js';
 
 function mostrarJob() {
     // Hide all job elements
