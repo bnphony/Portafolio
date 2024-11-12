@@ -139,7 +139,6 @@ $(function() {
     const $nav = document.querySelector('nav.main-header');
     const $navLinks = document.querySelectorAll('nav.main-header a');
     const $secciones = document.querySelectorAll('section');
-    console.log($navLinks);
     const topOfNav = $nav.offsetTop;
     let oneSeccion = '';
     function fixNav() {
@@ -158,7 +157,6 @@ $(function() {
                         // document.querySelector(`nav.main-header a[href*="#${id}"]`).classList.add('active-link');
                         if (link.getAttribute('href') === `#${oneSeccion}`) link.classList.add('active-link');
                     });
-                    console.log('top: ', seccion.getAttribute('id'));
                 }
             });
         } else { // The top of the page

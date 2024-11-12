@@ -49,7 +49,7 @@ export const proyectos = [
             reportes de los resultados, etc.
         `,
         'tecnologias': ['Python', 'Django', 'postgresql', 'HTML-CSS-JavaScript', 'JQuery', 'Ajax', 'Bootstrap'],
-        'imagen': 'app1/img/proyecto_1.png',
+        'imagen': 'img/proyecto_1.png',
         'url': 'https://campeonato-mulalo.top/',
         'github': '',
         'year': '2024',
