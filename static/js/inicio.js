@@ -1,4 +1,5 @@
 import { proyectos, experiencia } from '/Portafolio/static/js/data.js';
+// import { proyectos, experiencia } from './data.js';
 
 function mostrarJob() {
     // Hide all job elements
@@ -32,8 +33,8 @@ function graficarProyectos() {
                                 }).join('')}
                             </ul>
                             <div class="t-links">
-                                ${item.github !== '' ? '<span><a href="'+ item.github +'"><i class="fab fa-github"></i></a></span>' : ''}
-                                ${item.url !== '' ? '<span><a href="'+ item.url +'"><i class="fas fa-external-link-square-alt"></i></a></span>' : ''}
+                                ${item.github !== '' ? '<span><a href="'+ item.github +'" target="_blank"><i class="fab fa-github"></i></a></span>' : ''}
+                                ${item.url !== '' ? '<span><a href="'+ item.url +'" target="_blank"><i class="fas fa-external-link-square-alt"></i></a></span>' : ''}
                             </div>
                         </div>
                     </div>
@@ -52,8 +53,8 @@ function graficarProyectos() {
                     <div class="s-header">
                         <h4>${item.nombre}</h4>
                         <div>
-                            ${item.github !== '' ? '<span><a href="'+item.github+'"><i class="fab fa-github"></i></a></span>' : ''}
-                            ${item.url !== '' ? '<span><a href="'+item.url+'"><i class="fas fa-external-link-square-alt"></i></a></span>' : ''}
+                            ${item.github !== '' ? '<span><a href="'+item.github+'" target="_blank"><i class="fab fa-github"></i></a></span>' : ''}
+                            ${item.url !== '' ? '<span><a href="'+item.url+'" target="_blank"><i class="fas fa-external-link-square-alt"></i></a></span>' : ''}
                         </div>
                     </div>
                     <div class="s-content">

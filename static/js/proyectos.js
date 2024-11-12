@@ -1,4 +1,5 @@
 import { proyectos } from '/Portafolio/static/js/data.js';
+// import { proyectos } from './data.js';
 
 $(function() {
     let html = '';

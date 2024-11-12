@@ -77,89 +77,18 @@ section {
   :root {
     font-size: 14px;
   }
-
-  /* Seccion 3 */
-  .c-experiencia {
-    width: 90%;
-  }
-  /* Seccion 4 */
-
-  .p-principal {
-    grid-template-columns: 1fr;
-    grid-template-areas: "p-img" "p-info";
-  }
-  .p-principal .p-info {
-    grid-area: p-info;
-  }
-  .p-principal .p-img {
-    grid-area: p-img;
-    padding-block: 20px;
-  }
-
-  .p-principal > .p-img img {
-    padding: 0;
-  }
-
-  .proyectos {
-    padding: 10px;
-    width: 90%;
-  }
-
-  /* SECCION 5 */
-  #formContacto {
-    width: 90%;
-  }
 }
 
 @media (max-width: 480px) {
   :root {
     font-size: 12px;
   }
-  /* SECCION 1 */
 
   section {
     width: 100%;
   }
 
-  /* SECCION 3 */
-  .c-experiencia {
-    width: 100%;
-  }
-
-  /* SECCION 4 */
-
-  .p-principal {
-    grid-template-columns: 1fr;
-    grid-template-areas: "p-img" "p-info";
-  }
-
-  .proyectos {
-    width: 100%;
-  }
-  .p-principales,
-  .c-secundarios {
-    padding: 0;
-  }
-
-  .p-principal {
-    padding: 10px;
-  }
-
-  .p-principal .p-info {
-    grid-area: p-info;
-  }
-  .p-principal .p-img {
-    grid-area: p-img;
-  }
-
-  .s-proyecto {
-    grid-template-columns: 1fr;
-  }
-
-  /* SECCION 5 */
-
-  #formContacto {
-    padding: 10px;
+  .c-bienvenida {
     width: 100%;
   }
 }

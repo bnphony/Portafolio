@@ -74,6 +74,7 @@
 .p-info > .tecnologias > .t-links a {
   color: var(--secondary-color);
   font-size: 1.5rem;
+  margin-right: 10px;
   transition: font-size 0.2s;
 }
 .p-info > .tecnologias > .t-links a:hover {
