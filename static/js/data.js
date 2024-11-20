@@ -49,7 +49,7 @@ export const proyectos = [
             reportes de los resultados, etc.
         `,
         'tecnologias': ['Python', 'Django', 'postgresql', 'HTML-CSS-JavaScript', 'JQuery', 'Ajax', 'Bootstrap'],
-        'imagen': 'img/proyecto_1.png',
+        'imagen': ['img/proyectos/p_futbol.PNG'],
         'url': 'https://campeonato-mulalo.top/',
         'github': '',
         'year': '2024',
@@ -60,7 +60,7 @@ export const proyectos = [
             Aplicación Móvil sobre un Sistema de Venta de Productos.
         `,
         'tecnologias': ['Java', 'Android Studio', 'XML'],
-        'imagen': '',
+        'imagen': ['img/proyectos/p_ventas_2.png', 'img/proyectos/p_ventas_1.png'],
         'url': '',
         'github': 'https://github.com/bnphony/Ventas-AS',
         'year': '2022',
@@ -71,7 +71,7 @@ export const proyectos = [
             Aplicación Móvil para programar eventos y controlar el tiempo para que ocurran.
         `,
         'tecnologias': ['Java', 'Android Studio', 'XML'],
-        'imagen': '',
+        'imagen': ['img/proyectos/p_cronometro_2.png', 'img/proyectos/p_cronometro_1.png'],
         'url': '',
         'github': 'https://github.com/bnphony/Cronometro-AS',
         'year': '2023',
@@ -82,7 +82,7 @@ export const proyectos = [
             Sistema para la Valoración de Series/Películas, además de presentar reportes.
         `,
         'tecnologias': ['PHP', 'Mysql', 'HTML-CSS-JavaScript', 'D3js'],
-        'imagen': '',
+        'imagen': ['img/proyectos/p_calificar_series.png'],
         'url': '',
         'github': 'https://github.com/bnphony/Calificar-Series',
         'year': '2023',
@@ -93,7 +93,7 @@ export const proyectos = [
             Sistema para ejercitar la resolución de operaciones matemáticas (suma/resta) mentalmente.
         `,
         'tecnologias': ['python', 'django', 'jquery', 'd3js', 'HTML-CSS-JavaScript'],
-        'imagen': '',
+        'imagen': ['img/proyectos/p_suma_mental.png'],
         'url': 'https://bnphony.github.io/Suma-Mental/',
         'github': 'https://github.com/bnphony/Suma-Mental',
         'year': '2024',
@@ -104,7 +104,7 @@ export const proyectos = [
             Aplicación Web para convertir una lista simple en un ranking ordenado.
         `,
         'tecnologias': ['HTML-CSS-JavaScript', 'JQuery'],
-        'imagen': '',
+        'imagen': [''],
         'url': 'https://bnphony.github.io/ListaComentada/',
         'github': 'https://github.com/bnphony/ListaComentada',
         'year': '2024',
@@ -115,7 +115,7 @@ export const proyectos = [
             Sistema de Inventarios y generación de reportes.
         `,
         'tecnologias': ['python', 'django', 'HTML-CSS-JavaScript'],
-        'imagen': '',
+        'imagen': [''],
         'url': '',
         'github': 'https://github.com/bnphony/Sistema-Inventario',
         'year': '2022',

@@ -84,7 +84,7 @@
 .p-principal > .p-img {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .p-principal > .p-img img {
   width: 100%;

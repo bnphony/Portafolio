@@ -173,12 +173,17 @@
       <!-- * CONTACTO * -->
       <section id="seccion5">
           <h2 class="align-left titulo-seccion">Contacto</h2>
-          <form action="" id="formContacto">
+          <form action="https://formsubmit.co/bryan.tarco01@gmail.com" id="formContacto" method="POST">
               <label for="idEmail">Email: </label>
-              <input type="text" id="idEmail" placeholder="Ingrese un email">
+              <input type="text" id="idEmail" name="Email" placeholder="Ingrese un email">
               <label for="idMensaje">Mensaje: </label>
-              <textarea rows="10" name="" id="idMensaje" placeholder="Ingrese alguna solicitud, sugerencia o duda..."></textarea>
+              <textarea rows="10" name="Mensaje" id="idMensaje" placeholder="Ingrese alguna solicitud, sugerencia o duda..."></textarea>
               <button type="submit">Enviar</button>
+
+              <!-- Redireccionar de vuelta a la pagina luego de enviar el correo -->
+               <input type="hidden" name="_next" value="http://localhost:5500"/>
+               <!-- Quitar el captch -->
+                <input type="hidden" name="_captcha" value="false"/>
           </form>
       </section>
 

@@ -1,5 +1,8 @@
-import { proyectos } from '/Portafolio/static/js/data.js';
-// import { proyectos } from './data.js';
+// import { proyectos } from '/Portafolio/static/js/data.js';
+import { proyectos } from './data.js';
+
+
+// Tabla de Proyectos
 
 $(function() {
     let html = '';

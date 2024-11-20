@@ -1,5 +1,5 @@
-import { proyectos, experiencia } from '/Portafolio/static/js/data.js';
-// import { proyectos, experiencia } from './data.js';
+// import { proyectos, experiencia } from '/Portafolio/static/js/data.js';
+import { proyectos, experiencia } from './data.js';
 
 function mostrarJob() {
     // Hide all job elements
@@ -39,7 +39,12 @@ function graficarProyectos() {
                         </div>
                     </div>
                     <div class="p-img">
-                        <img src="static/${item.imagen !== '' ? item.imagen : 'img/murasa.png'}" alt="Proyecto 1">
+                            ${item.imagen.length <= 0 
+                                ? '<img src="static/img/murasa.png" alt="Proyecto 1">'
+                                : item.imagen.map(img => {
+                                        return `<img src="static/${img !== '' ? img : 'img/murasa.png'}" alt="Proyecto 1">`;
+                                    }).join('')
+                                }
                     </div>
                 </div>       
             `;
@@ -135,6 +140,15 @@ function debounce(func, wait = 20, immediate = true) {
 }
 
 
+function enviarEmail() {
+
+    $()
+    // template_3o2tcak
+    // service_3h3qdoe
+    // gBrZZJ8ja2csyP9mZ
+
+}
+
 $(function() {
 
     const $nav = document.querySelector('nav.main-header');
@@ -198,3 +212,5 @@ $(function() {
     // }
     // window.addEventListener('scroll', debounce(checkSlide));
 });
+
+
