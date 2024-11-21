@@ -82,7 +82,7 @@ export const proyectos = [
             Sistema para la Valoración de Series/Películas, además de presentar reportes.
         `,
         'tecnologias': ['PHP', 'Mysql', 'HTML-CSS-JavaScript', 'D3js'],
-        'imagen': ['img/proyectos/p_calificar_series.png'],
+        'imagen': ['img/proyectos/p_calificar_series.PNG'],
         'url': '',
         'github': 'https://github.com/bnphony/Calificar-Series',
         'year': '2023',
@@ -93,7 +93,7 @@ export const proyectos = [
             Sistema para ejercitar la resolución de operaciones matemáticas (suma/resta) mentalmente.
         `,
         'tecnologias': ['python', 'django', 'jquery', 'd3js', 'HTML-CSS-JavaScript'],
-        'imagen': ['img/proyectos/p_suma_mental.png'],
+        'imagen': ['img/proyectos/p_suma_mental.PNG'],
         'url': 'https://bnphony.github.io/Suma-Mental/',
         'github': 'https://github.com/bnphony/Suma-Mental',
         'year': '2024',
