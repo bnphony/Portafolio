@@ -98,8 +98,43 @@ footer {
   font-size: 1.7rem;
 }
 
+.email-footer {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.email-footer address {
+  padding-right: 10px;
+}
+
+.email-footer i {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.email-footer i:hover {
+  color: var(--text-color);
+}
+
 footer address {
   margin-bottom: 0;
+}
+
+#copyMessage {
+  position: absolute; /* Absolutely position the message */
+  top: -5px; /* Adjust as needed to place above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none; /* Initially hidden */
+  font-size: 0.9em;
+  white-space: nowrap;
 }
 
 /* * Container Principal: content * */

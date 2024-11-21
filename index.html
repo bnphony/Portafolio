@@ -41,8 +41,7 @@
    <link rel="stylesheet" href="static/css/seccion3.css" />
    <link rel="stylesheet" href="static/css/seccion4.css" />
    <link rel="stylesheet" href="static/css/seccion5.css" />
-   <!-- JS para las secciones -->
-   <script src="static/js/inicio.js" type="module"></script>
+  
 
 </head>
 <body>
@@ -173,17 +172,12 @@
       <!-- * CONTACTO * -->
       <section id="seccion5">
           <h2 class="align-left titulo-seccion">Contacto</h2>
-          <form action="https://formsubmit.co/bryan.tarco01@gmail.com" id="formContacto" method="POST">
+          <form action="." id="formContacto" method="POST">
               <label for="idEmail">Email: </label>
-              <input type="text" id="idEmail" name="Email" placeholder="Ingrese un email">
+              <input type="email" id="idEmail" name="fromEmail" placeholder="Ingrese un email" required>
               <label for="idMensaje">Mensaje: </label>
-              <textarea rows="10" name="Mensaje" id="idMensaje" placeholder="Ingrese alguna solicitud, sugerencia o duda..."></textarea>
-              <button type="submit">Enviar</button>
-
-              <!-- Redireccionar de vuelta a la pagina luego de enviar el correo -->
-               <input type="hidden" name="_next" value="http://localhost:5500"/>
-               <!-- Quitar el captch -->
-                <input type="hidden" name="_captcha" value="false"/>
+              <textarea rows="10" name="message" id="idMensaje" placeholder="Ingrese alguna solicitud, sugerencia o duda..." required></textarea>
+              <button type="submit" id="btnContacto">Enviar</button>
           </form>
       </section>
 
@@ -195,9 +189,23 @@
 <!-- * FOOTER * -->
   <footer class="main-footer text-center">
     <address>Creado por <strong>Bryan</strong>.</address>
-    <address>bryan.tarco01@gmail.com</address>
+    <div class="email-footer">
+        <address>bryan.tarco01@gmail.com</address><i class="far fa-clone" id="btnCopiar" title="Copiar Email"></i>
+        <p id="copyMessage">Email Copiado!</p>
+    </div>
   </footer>
 </body>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "gBrZZJ8ja2csyP9mZ",
+            });
+        })();
+    </script>
+
+ <!-- JS para las secciones -->
+ <script src="static/js/inicio.js" type="module"></script>
 
 </html>

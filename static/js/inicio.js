@@ -1,5 +1,5 @@
-// import { proyectos, experiencia } from '/Portafolio/static/js/data.js';
-import { proyectos, experiencia } from './data.js';
+import { proyectos, experiencia } from '/Portafolio/static/js/data.js';
+// import { proyectos, experiencia } from './data.js';
 
 function mostrarJob() {
     // Hide all job elements
@@ -40,9 +40,9 @@ function graficarProyectos() {
                     </div>
                     <div class="p-img">
                             ${item.imagen.length <= 0 
-                                ? '<img src="static/img/murasa.png" alt="Proyecto 1">'
+                                ? '<img src="static/img/murasa_no_image.png" alt="Proyecto 1">'
                                 : item.imagen.map(img => {
-                                        return `<img src="static/${img !== '' ? img : 'img/murasa.png'}" alt="Proyecto 1">`;
+                                        return `<img src="static/${img !== '' ? img : 'img/murasa_no_image.png'}" alt="Proyecto 1">`;
                                     }).join('')
                                 }
                     </div>
@@ -141,12 +141,61 @@ function debounce(func, wait = 20, immediate = true) {
 
 
 function enviarEmail() {
+    $('#formContacto').on('submit', function(e) {
+        e.preventDefault();
+        const data = new FormData(this);
+    
+        // Trim whitespace and validate fields
+        const emailFrom = data.get('fromEmail')?.trim();
+        const message = data.get('message')?.trim();
+    
+        if (!emailFrom || !message) {
+            Swal.fire({
+                title: "Error",
+                text: "Por favor, complete todos los campos del formulario.",
+                icon: "error"
+            });
+            return;
+        }
+    
+        $('#btnContacto').text('Enviando...');
+        $('#btnContacto').prop('disabled', true);
+        const serviceID = 'service_3h3qdoe';
+        const templateID = 'template_3o2tcak';
+    
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                $('#btnContacto').text('Enviar');
+                this.reset();
+                Swal.fire({
+                    title: "Muchas Gracias!",
+                    text: "Nos pondremos en contacto, lo antes posible!",
+                    icon: "success"
+                });
+                setTimeout(() => {
+                    $('#btnContacto').prop('disabled', false);
+                }, 30000);
+            }, (error) => {
+                $('#btnContacto').text('Enviar');
+                Swal.fire({
+                    title: "Error",
+                    text: "Hubo un problema enviando el formulario. Inténtalo de nuevo.",
+                    icon: "error"
+                });
+                $('#btnContacto').prop('disabled', false);
+            });
+    });
+    
+}
 
-    $()
-    // template_3o2tcak
-    // service_3h3qdoe
-    // gBrZZJ8ja2csyP9mZ
-
+// Copy the result List to paste in any place
+function copyListResult() {
+    const textToCopy = $('.email-footer address').text().trim();
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        $('#copyMessage').fadeIn(300).delay(1000).fadeOut(300);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
 }
 
 $(function() {
@@ -183,6 +232,12 @@ $(function() {
 
     graficarExperiencia();
     graficarProyectos();
+
+    // Enviar Formulario de Contacto
+    enviarEmail();
+
+    // Copiar el Email
+    $('#btnCopiar').on('click', copyListResult);
 
     // Usada para reducir el numero de veces que se ejecuta un evento
 
