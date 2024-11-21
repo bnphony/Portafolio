@@ -1,4 +1,4 @@
-import { proyectos, experiencia } from '/Portafolio/static/js/data.js';
+import { proyectos, experiencia } from './static/js/data.js';
 // import { proyectos, experiencia } from './data.js';
 
 function mostrarJob() {
