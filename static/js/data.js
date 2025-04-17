@@ -50,7 +50,7 @@ export const proyectos = [
         `,
         'tecnologias': ['Python', 'Django', 'postgresql', 'HTML-CSS-JavaScript', 'JQuery', 'Ajax', 'Bootstrap'],
         'imagen': ['img/proyectos/p_futbol.PNG'],
-        'url': 'https://campeonato-mulalo.top/',
+        'url': '',
         'github': '',
         'year': '2024',
     },
